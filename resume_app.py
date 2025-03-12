@@ -10,7 +10,7 @@ import re
 nlp = spacy.load("en_core_web_sm")
 
 # Expanded skill set (Can be modified or fetched from a database)
-SKILL_SET = {"Python", "JavaScript", "Machine Learning", "Data Science", "Marketing", "SEO", "React", "Deep Learning", "TensorFlow", "NLP", "SQL"}
+SKILL_SET = {"Python", "JavaScript", "Machine Learning", "Data Science", "Artificial Intelligence",  "Scikit Learn", "Deep Learning", "TensorFlow", "NLP", "SQL"}
 
 def preprocess_text(text):
     """Cleans text by removing special characters and extra spaces."""
