@@ -7,13 +7,22 @@ import spacy
 import re
 import subprocess
 import plotly.express as px
+import spacy
+import subprocess
+import os
 
-# Ensure spaCy model is installed (fix for Streamlit deployment)
-try:
-    nlp = spacy.load("en_core_web_sm")
-except OSError:
-    subprocess.run(["python", "-m", "spacy", "download", "en_core_web_sm"])
-    nlp = spacy.load("en_core_web_sm")
+# Function to ensure spaCy model is installed
+def load_spacy_model():
+    model_name = "en_core_web_sm"
+    try:
+        return spacy.load(model_name)
+    except OSError:
+        # Download the model if not found
+        subprocess.run(["python", "-m", "spacy", "download", model_name], check=True)
+        return spacy.load(model_name)
+
+# Load spaCy model
+nlp = load_spacy_model()
 
 # Expanded skill set (Can be modified or fetched from a database)
 SKILL_SET = {
