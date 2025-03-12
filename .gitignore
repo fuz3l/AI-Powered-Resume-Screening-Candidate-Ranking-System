@@ -1,0 +1,39 @@
+# Ignore the virtual environment
+streamlit-env/
+venv/
+env/
+
+# Ignore Python cache files
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Ignore logs and database files
+*.log
+*.sqlite3
+*.db
+
+# Ignore Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Ignore system-specific files
+.DS_Store
+Thumbs.db
+
+# Ignore VS Code settings
+.vscode/
+
+# Ignore environment variables (if any)
+.env
+*.env
+
+# Ignore compiled Cython files
+*.c
+*.so
+
+# Ignore large dataset files
+*.csv
+*.tsv
+*.json
+*.xlsx
